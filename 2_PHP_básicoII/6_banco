@@ -1,0 +1,48 @@
+<?php
+    //include ('7_funcões_banco.php');
+    //padrão essa abaixo
+    //include '7_funções_banco.php';
+
+    //quando queremos que de erro se o arquivo
+    //não for encontrado
+    //require '7_funções_banco.php';
+
+    //quando queremos que o arquivo seja adicionado
+    //apenas uma vez
+    require_once '7_funções_banco.php';
+
+     $contasCorrentes = [
+        100 => [
+            //761 => 'Lucas' também podemos definir números como indice
+            'titular' => 'Lucas',
+            'saldo' => 1000,
+        ], 
+        101 => [
+            'titular' => 'Maria',
+            'saldo' => 300,
+        ], 
+        102 => [
+            'titular' => 'Ana',
+            'saldo' => 10000,
+        ]
+    ];
+
+    foreach ($contasCorrentes as $cpf => $conta){
+        //forma basica para printar tudo junto
+        printMensagem(mensagem: 
+            "$cpf $conta[titular] $conta[saldo]"
+        );
+        $conta['saldo'] = sacar(conta: $conta,valor: 500);
+        printMensagem(mensagem: 
+            "$cpf {$conta['titular']} {$conta['saldo']}"
+        );
+        //modemos nomear os parametros fora da ordem, mas definindo um tem que definir todos
+        $conta['saldo'] = deposito(conta:$conta,valor: 1000);
+        //Forma complexa de printar
+        printMensagem(mensagem: 
+            "$cpf {$conta['titular']} {$conta['saldo']}"
+        );
+
+        echo "" . PHP_EOL;
+        echo "" . PHP_EOL;
+    }

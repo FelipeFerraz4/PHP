@@ -1,0 +1,14 @@
+E_WARNING
+    Quando encontra um erro e não consege executar
+    ele, mas o programa não para
+
+
+E_NOTICE
+    encontra um erro, mas ainda executa a ação, 
+    sem fazer o comando parar
+
+    pega parte de um vetor que não existe ou como 
+    valor vazio
+
+E_ERROR
+    quando encontra um erro e para o programa no erro
