@@ -36,12 +36,18 @@
         printMensagem(mensagem: 
             "$cpf {$conta['titular']} {$conta['saldo']}"
         );
+
+        //passagem por referencia usa & antes da variaval na definição da função
+        upperCaseTitular(conta: $conta);
+
         //modemos nomear os parametros fora da ordem, mas definindo um tem que definir todos
         $conta['saldo'] = deposito(conta:$conta,valor: 1000);
         //Forma complexa de printar
         printMensagem(mensagem: 
             "$cpf {$conta['titular']} {$conta['saldo']}"
         );
+
+
 
         echo "" . PHP_EOL;
         echo "" . PHP_EOL;

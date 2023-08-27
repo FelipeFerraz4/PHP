@@ -1,0 +1,11 @@
+PHP na Web
+    para abrir o servido do php Built-in web server
+    - Como abrir: entre na pasta do projeto e digite
+        php -S localhost:8080 //o 8080 é a porta podendo ser qualquer uma com a 8000
+
+    - Para acessar devemos digitar no navegador localhost:8080 // 8080 é a porta escolhida
+        vai dizer que não encontrou, pois ele procurou pelo arquivo index; 
+        mas se digitar o caminho do arquivo a parti da pasta do projeto
+        vai entrar no arquivo
+
+    -Ex: http://localhost:8080/10_banco2.php // sendo 10_banco2.php o nome do arquivo;

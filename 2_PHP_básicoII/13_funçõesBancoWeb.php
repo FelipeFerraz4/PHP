@@ -1,12 +1,9 @@
 <?php
-    function printMensagem ($mensagem) {
-        echo $mensagem . PHP_EOL;
+    function printMensagem ($mensagem) 
+    {
+        echo $mensagem . '<br>';
     }
-    // podemos definir ou não o tipo de parametro
-    //podemos definir ou não o return da função
-    // definir aumenta a segurança e facilita a procura do erro
-    //pois irar acontecer na chamada da função e não na função
-    function sacar (array $conta, float $valor): float 
+        function sacar (array $conta, float $valor): float 
     {
         if ($conta['saldo'] >= $valor ){
             $conta['saldo'] -= $valor;
@@ -26,9 +23,10 @@
             return $conta['saldo'];
         }
     }
-
-    //Função que passa por refencia
     function upperCaseTitular (array &$conta) {
-        //mb_strtoupper transforma o texto em maiusculo
         $conta['titular'] = mb_strtoupper($conta['titular']);
+    }
+
+    function exibirConta (array $conta, $cpf) {
+        echo "<li>Titular: {$conta['titular']} CPF: $cpf Saldo: {$conta['saldo']} </li>";
     }
