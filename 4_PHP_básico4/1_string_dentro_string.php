@@ -41,3 +41,9 @@
     //se precisar modificar as complexas precisa da extensão mb_strtouppper
     echo strtoupper($nome) . PHP_EOL;
     echo strtolower($nome) . PHP_EOL;
+
+    explode('@', $email);
+    //separa a string no operador definido neste caso @
+    //retornando um array separado
+    //podendo adicionar o paramentro limit
+
